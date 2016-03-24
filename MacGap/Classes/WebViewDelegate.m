@@ -8,7 +8,7 @@
 #import "Window.h"
 #import "WindowController.h"
 #import "Clipboard.h"
-#import "Fonts.h"
+#import "fonts.h"
 #import "MenuProxy.h"
 #import "UserDefaults.h"
 

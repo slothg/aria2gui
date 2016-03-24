@@ -21,6 +21,7 @@
 		88746BEE14CCA435001E160E /* JSEventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88746BED14CCA435001E160E /* JSEventHelper.m */; };
 		88C0646014BDE10A00E4BCE2 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C0645F14BDE10A00E4BCE2 /* Window.m */; };
 		88C0646D14BDF6A600E4BCE2 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C0646C14BDF6A600E4BCE2 /* WindowController.m */; };
+		C2F652561CA445E600071DD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE451BE14BA79C600190544 /* Cocoa.framework */; };
 		F2B80016179E0FC100B069A8 /* Clipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B80015179E0FC100B069A8 /* Clipboard.m */; };
 		FA32509D14BA813600BF0781 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA32509C14BA813600BF0781 /* WebKit.framework */; };
 		FA3250C314BA85E700BF0781 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3250BC14BA85E700BF0781 /* ContentView.m */; };
@@ -34,7 +35,6 @@
 		FA3250DF14BA878D00BF0781 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA3250DE14BA878D00BF0781 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FA3250E514BA883A00BF0781 /* public in Resources */ = {isa = PBXBuildFile; fileRef = FA3250E414BA883A00BF0781 /* public */; };
 		FA3250E714BA8BCE00BF0781 /* application.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA3250E614BA8BCE00BF0781 /* application.icns */; };
-		FA3F7742168F70790027B324 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3F7741168F70780027B324 /* Cocoa.framework */; };
 		FA3F7743168F70850027B324 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA32509E14BA816E00BF0781 /* Growl.framework */; };
 		FAE451C914BA79C600190544 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAE451C714BA79C600190544 /* InfoPlist.strings */; };
 		FAE451CB14BA79C600190544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE451CA14BA79C600190544 /* main.m */; };
@@ -104,7 +104,6 @@
 		FA3250DE14BA878D00BF0781 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = MacGap/Growl.framework; sourceTree = "<group>"; };
 		FA3250E414BA883A00BF0781 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		FA3250E614BA8BCE00BF0781 /* application.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = application.icns; sourceTree = SOURCE_ROOT; };
-		FA3F7741168F70780027B324 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		FAE451BA14BA79C600190544 /* Aria2GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2GUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE451BE14BA79C600190544 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAE451C114BA79C600190544 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -124,9 +123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F652561CA445E600071DD7 /* Cocoa.framework in Frameworks */,
 				6F169DAC18CD8A4A005EDDF3 /* JavaScriptCore.framework in Frameworks */,
 				FA3F7743168F70850027B324 /* Growl.framework in Frameworks */,
-				FA3F7742168F70790027B324 /* Cocoa.framework in Frameworks */,
 				FA32509D14BA813600BF0781 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +190,6 @@
 		FAE451AF14BA79C600190544 = {
 			isa = PBXGroup;
 			children = (
-				FA3F7741168F70780027B324 /* Cocoa.framework */,
 				01D045AF1C035821001468EF /* aria2c */,
 				FA3250E414BA883A00BF0781 /* public */,
 				FAE451C414BA79C600190544 /* MacGap */,
@@ -432,7 +430,7 @@
 				GCC_PREFIX_HEADER = "MacGap/Aria2GUI-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Aria2GUI;
 				SDKROOT = macosx;
@@ -454,7 +452,7 @@
 				GCC_PREFIX_HEADER = "MacGap/Aria2GUI-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Aria2GUI;
 				SDKROOT = macosx;

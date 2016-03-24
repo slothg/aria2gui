@@ -43,6 +43,7 @@
 
 -(void)startAria2
 {
+    /*
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *supportPath=[NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
@@ -69,16 +70,19 @@
     task.launchPath = @"/bin/sh";
     task.arguments = @[startAriaPath];
     [task launch];
+    */
     
 }
 
 -(void)closeAria2
 {
+    /*
     NSArray *arg =[NSArray arrayWithObjects:@"aria2c",nil];
     NSTask *task=[[NSTask alloc] init];
     task.launchPath = @"/usr/bin/killall";
     task.arguments = arg;
     [task launch];
+    */
 }
 
 @end
